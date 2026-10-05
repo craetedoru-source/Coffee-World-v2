@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Beans | Coffee World</title>
+    <meta name="description"
+        content="Coffee World helps beginners and intermediate coffee drinkers compare beans, roast levels and brewing methods in one place.">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav"><a href="index.html" class="logo">Coffee World</a><button class="menu-toggle"
+                aria-label="Toggle navigation" aria-expanded="false">☰</button>
+            <nav class="site-nav" aria-label="Main navigation"><a href="index.html" class="">Home</a>
+                <a href="coffee-beans.html" class="active">Coffee Beans</a>
+                <a href="brewing-methods.html" class="">Brewing Methods</a>
+                <a href="compare.html" class="">Compare Coffee</a>
+                <a href="about.html" class="">About</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-title">
+            <div class="container">
+               <img src="images/Coffee Beans Variety.png"
+     alt="Different varieties and roast levels of coffee beans"
+     class="coffee-beans-hero">
+                <p class="eyebrow">Coffee Beans</p>
+                <h1>Explore beans from different regions</h1>
+                <p>The cards below show examples of coffee beans with their origin, roast level, flavour notes and
+                    caffeine profile.</p>
+            </div>
+        </section>
+        <section class="section alt">
+            <div class="container">
+                <div class="filters">
+                    <div class="filter-pill">Region</div>
+                    <div class="filter-pill">Roast</div>
+                    <div class="filter-pill">Flavour</div>
+                    <div class="filter-pill">Caffeine</div>
+                </div>
+                <div class="card-grid three">
+                    <article class="card">
+                        <div class="bean-visual brazil"></div>
+                        <h3>Brazil Santos</h3>
+                        <p><strong>Region:</strong> Brazil</p>
+                        <p><strong>Roast:</strong> Medium</p>
+                        <p><strong>Flavour notes:</strong> Chocolate, nuts, caramel</p>
+                        <p><strong>Caffeine:</strong> Medium</p><button class="btn btn-small bean-button"
+                            data-bean="brazil">View details</button>
+                    </article>
+                    <article class="card">
+                        <div class="bean-visual ethiopia"></div>
+                        <h3>Ethiopian Yirgacheffe</h3>
+                        <p><strong>Region:</strong> Ethiopia</p>
+                        <p><strong>Roast:</strong> Light</p>
+                        <p><strong>Flavour notes:</strong> Citrus, floral, berry</p>
+                        <p><strong>Caffeine:</strong> Medium to high</p><button class="btn btn-small bean-button"
+                            data-bean="ethiopia">View details</button>
+                    </article>
+                    <article class="card">
+                        <div class="bean-visual colombia"></div>
+                        <h3>Colombian Supremo</h3>
+                        <p><strong>Region:</strong> Colombia</p>
+                        <p><strong>Roast:</strong> Medium-dark</p>
+                        <p><strong>Flavour notes:</strong> Cocoa, fruit, balanced sweetness</p>
+                        <p><strong>Caffeine:</strong> Medium</p><button class="btn btn-small bean-button"
+                            data-bean="colombia">View details</button>
+                    </article>
+                </div>
+                <div id="bean-details" class="info-box" aria-live="polite" style="margin-top:1.3rem;">
+                    <h3>Bean details</h3>
+                    <p>Select a coffee bean card to view a quick recommendation.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <h2>Coffee World</h2>
+                <p>A simple coffee guide for beginners and enthusiasts.</p>
+            </div>
+            <div>
+                <h3>Quick links</h3>
+                <ul class="footer-links">
+                    <li><a href="coffee-beans.html">Coffee Beans</a></li>
+                    <li><a href="brewing-methods.html">Brewing Methods</a></li>
+                    <li><a href="compare.html">Compare Coffee</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

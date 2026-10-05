@@ -1,0 +1,491 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+:root {
+    --bg: #f8f5f0;
+    --surface: #fff;
+    --surface-alt: #efe7dd;
+    --text: #2e1d12;
+    --muted: #6c584c;
+    --border: #dccdbf;
+    --accent: #6f4e37;
+    --accent-dark: #4e3527;
+    --shadow: 0 12px 30px rgba(46, 29, 18, .08);
+    --radius: 18px;
+    --container: 1120px
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.container {
+    width: min(100% - 2rem, var(--container));
+    margin-inline: auto
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(248, 245, 240, .96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(220, 205, 191, .7)
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem
+}
+
+.logo {
+    font-size: 1.35rem;
+    font-weight: 800
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem
+}
+
+.site-nav a {
+    color: var(--muted);
+    font-weight: 700
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: var(--accent)
+}
+
+.menu-toggle {
+    display: none;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 12px;
+    padding: .55rem .8rem;
+    font-size: 1.2rem;
+    cursor: pointer
+}
+
+.hero {
+    padding: 5rem 0 4rem;
+    background: radial-gradient(circle at top right, rgba(111, 78, 55, .18), transparent 30%), linear-gradient(180deg, #f3ede6 0%, var(--bg) 100%)
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 2rem;
+    align-items: center
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    font-size: .78rem;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: .35rem
+}
+
+.hero h1,
+.page-title h1,
+.section-heading h2 {
+    line-height: 1.1;
+    margin: 0 0 1rem
+}
+
+.hero h1 {
+    font-size: clamp(2.5rem, 5vw, 4.4rem)
+}
+
+.page-title h1 {
+    font-size: clamp(2.2rem, 4vw, 3.5rem)
+}
+
+.hero-text,
+.page-title p,
+.section-heading p,
+.card p,
+.info-box p,
+.info-box li {
+    color: var(--muted)
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    padding: .85rem 1.2rem;
+    font-weight: 800;
+    border: 1px solid transparent;
+    cursor: pointer
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #fff
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark)
+}
+
+.btn-secondary {
+    background: var(--surface);
+    border-color: var(--border)
+}
+
+.btn-small {
+    padding: .7rem 1rem;
+    background: var(--surface-alt);
+    border-color: var(--border)
+}
+
+.hero-visual,
+.card,
+.info-box,
+.table-wrap {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow)
+}
+
+.hero-visual {
+    min-height: 380px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden
+}
+
+.bean {
+    position: absolute;
+    width: 110px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #855d43, #5a3d2c);
+    transform: rotate(-28deg);
+    opacity: .9
+}
+
+.bean::after {
+    content: "";
+    position: absolute;
+    inset: 14px 49px;
+    width: 5px;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 10px
+}
+
+.bean-1 {
+    top: 24px;
+    right: 20px
+}
+
+.bean-2 {
+    top: 120px;
+    left: 36px
+}
+
+.bean-3 {
+    bottom: 34px;
+    right: 75px
+}
+
+.hero-panel {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background: rgba(255, 255, 255, .92);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem 1.1rem
+}
+
+.hero-panel h2 {
+    margin: 0 0 .5rem;
+    font-size: 1.15rem
+}
+
+.section {
+    padding: 4rem 0
+}
+
+.section.alt {
+    background: #f1ebe4
+}
+
+.page-title {
+    padding: 4rem 0 2rem
+}
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 1.8rem
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.25rem
+}
+
+.card-grid.three {
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card-grid.four {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.card {
+    padding: 1.3rem
+}
+
+.card h3 {
+    margin-top: 0
+}
+
+.card a {
+    display: inline-block;
+    margin-top: .6rem;
+    color: var(--accent);
+    font-weight: 800
+}
+
+.story-grid,
+.aims-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem
+}
+
+.info-box {
+    padding: 1.4rem
+}
+
+.info-box h2,
+.info-box h3 {
+    margin-top: 0
+}
+
+.shortcut-section {
+    padding: 4rem 0;
+    background: var(--surface-alt)
+}
+
+.shortcut-card {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem;
+    margin-bottom: 1.2rem
+}
+
+.filter-pill {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: .65rem 1rem;
+    font-weight: 800;
+    color: var(--muted)
+}
+
+.bean-visual {
+    height: 170px;
+    border-radius: 14px;
+    margin-bottom: 1rem
+}
+
+.brazil {
+    background: linear-gradient(120deg, #d9c1a8, #8f664c)
+}
+
+.ethiopia {
+    background: linear-gradient(120deg, #efe1cc, #9f7a63)
+}
+
+.colombia {
+    background: linear-gradient(120deg, #ceb59c, #7d5740)
+}
+
+.brew-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--surface-alt);
+    color: var(--accent);
+    font-weight: 900;
+    margin-bottom: .9rem
+}
+
+.table-wrap {
+    overflow-x: auto;
+    padding: .5rem
+}
+
+table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    background: var(--surface)
+}
+
+caption {
+    text-align: left;
+    font-weight: 800;
+    padding: .8rem;
+    color: var(--muted)
+}
+
+th,
+td {
+    border: 1px solid var(--border);
+    padding: .95rem;
+    text-align: left
+}
+
+th {
+    background: var(--surface-alt)
+}
+
+.site-footer {
+    background: #2f2118;
+    color: #f7efe7;
+    padding: 2rem 0
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 1.5rem
+}
+
+.footer-links {
+    margin: 0;
+    padding-left: 1rem
+}
+
+.footer-links a:hover {
+    text-decoration: underline
+}
+
+@media(max-width:900px) {
+
+    .hero-grid,
+    .story-grid,
+    .aims-grid,
+    .footer-grid,
+    .card-grid.three,
+    .card-grid.four {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:720px) {
+    .menu-toggle {
+        display: inline-flex
+    }
+
+    .site-nav {
+        position: absolute;
+        top: 72px;
+        left: 1rem;
+        right: 1rem;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        box-shadow: var(--shadow);
+        padding: 1rem
+    }
+
+    .site-nav.open {
+        display: flex
+    }
+
+    .hero-grid,
+    .story-grid,
+    .aims-grid,
+    .footer-grid,
+    .card-grid.three,
+    .card-grid.four {
+        grid-template-columns: 1fr
+    }
+
+    .hero {
+        padding-top: 3rem
+    }
+
+    .section,
+    .shortcut-section {
+        padding: 3rem 0
+    }
+}
+        /* Coffee World home hero image */
+.hero-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+/* Fresh coffee beans image */
+.fresh-coffee-image {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem auto;
+    border-radius: 18px;
+    object-fit: cover;
+}
+/* Coffee Beans page hero image */
+.coffee-beans-hero {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto 2rem auto;
+    border-radius: 18px;
+}
