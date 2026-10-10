@@ -1,1 +1,0 @@
-Open index.html to start. Keep all files in the same folder.
